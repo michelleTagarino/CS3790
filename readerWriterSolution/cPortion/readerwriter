@@ -1,0 +1,26 @@
+/*
+
+		Author: Michelle Tagarino ID# 5029967
+		Header File for Assignment #3 (Readers/Writers Solution)
+
+*/
+
+#ifndef READERWRITER
+#define READERWRITER
+
+#include <semaphore.h>
+#include <pthread.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+#define MAX 10 //maximum number of threads
+
+sem_t x, wsem;
+int read_count;
+int rand_sleep;
+
+void *reader(void *arg);
+void *writer(void *arg);
+
+#endif
